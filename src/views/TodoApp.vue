@@ -1,7 +1,7 @@
 <template>
     <div>
         <h5>{{ allTasks }} text </h5>
-        <InputTodo  :AddProp="newTodo=>{Add(newTodo)}"  :newTodoProp="newTodo"  :allTasks="allTasks"/>
+        <InputTodo  :AddProp="newTodo=>{Add(newTodo)}"  :newTodoProp="newToDo"  :allTasks="allTasks" />
         <ListTodo   :Delete="item=>{Delete(item)}"      :toDos="toDos"          :getSelect="getSelect" />
     </div>
 </template>
@@ -21,13 +21,12 @@ const LOCAL_STORAGE_KEY = 'todo-app'
     data () {
         return {
             toDos: this.$store.state.toDos,
-            newTodo: this.$store.state.newToDo
+            newToDo: this.$store.state.newToDo
         }
     },
     methods: {
         Add (str) {
             this.$store.dispatch('addTask', str)
-            this.newTodo = ''
         },
         Delete (item) {
             this.$store.dispatch('deleteToDo', item)

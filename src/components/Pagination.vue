@@ -2,12 +2,13 @@
     <div>
         <h2>{{ title }}</h2>
         <div class="overflow-auto">
-            <b-pagination
-            v-model="currentPage"
-            :total-rows="rows"
-            :per-page="perPage"
-            aria-controls="my-table"
-            ></b-pagination>
+            <!-- <v-pagination
+                v-model="currentPage"
+                :pages="10"
+                :range-size="1"
+                active-color="#DCEDFF"
+                @update:modelValue="updateHandler"
+            /> -->
 
             <p class="mt-3">Current Page: {{ currentPage }}</p>
 
@@ -23,6 +24,9 @@
 </template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
+import VPagination from 'node_modules/vue3-pagination/src/components/VPagination.vue'
+import BPagination from 'bootstrap-vue'
+// import 'vue3-pagination/dist/vue3-pagination.css'
 
 @Options({
     props: {
@@ -30,7 +34,7 @@ import { Options, Vue } from 'vue-class-component'
         lst: []
     },
     components: {
-        // BPagination
+        // VPagination
     },
     data () {
         return {

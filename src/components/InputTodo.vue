@@ -4,7 +4,7 @@
          <div class="form-group">
             <div>
                 <input class="form-control" autofocus
-                    v-model.trim="newTodo"
+                    v-model="newTodo"
                     @keyup.enter="Add(newTodo)"
                     placeholder="Input todo and enter to add">
             </div>
@@ -24,10 +24,12 @@ import { Options, Vue } from 'vue-class-component'
     props: {
         newTodoProp: String,
         AddProp: Function,
-        allTasks: Number
+        allTasks: Number,
+        namee: String
     },
     data () {
         return {
+            // newTodo: String
             newTodo: this.newTodoProp
         }
     },

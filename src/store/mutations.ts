@@ -5,7 +5,7 @@ export default {
                 title: newTodo,
                 selected: false
             })
-            state.newToDo = null
+            state.newToDo = newTodo
         }
     },
     deleteToDo (state:any, item:any):void {

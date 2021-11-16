@@ -12,8 +12,7 @@ const store = createStore({
     },
     actions: actions,
     mutations: mutations,
-    modules: {
-    },
+    modules: {},
     getters: getter
 })
 
