@@ -54,10 +54,7 @@
     "rules": {
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "vue/no-multiple-template-root": "off",
-      "indent": [
-        "error",
-        4
-      ]
+      "indent": ["error",4]
     }
   },
   "browserslist": [

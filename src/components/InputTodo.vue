@@ -32,7 +32,7 @@ import { Options, Vue } from 'vue-class-component'
         }
     },
     methods: {
-        Add (str) {
+        Add (str: string): void {
             this.AddProp(str)
             this.newTodo = ''
         }

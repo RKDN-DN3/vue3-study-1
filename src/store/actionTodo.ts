@@ -4,8 +4,5 @@ export default {
     },
     deleteToDo ({ commit }:{commit:any}, item:any):void {
         commit('deleteToDo', item)
-    },
-    doneEdit ({ commit }:{commit:any}, item:any):void {
-        commit('doneEdit', item)
     }
 }
