@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Form Input</h2>
+        <h2>{{ title }}</h2>
         <input v-model="txt1" ref="inputTxt1" autocomplete="off" type="text" class="input-focus" placeholder="Text"/>
         <button @click="addItem(txt1)">Add item</button>
         <button @click="addItemRefs($refs.inputTxt1)">Add item by refs</button>
@@ -11,11 +11,11 @@
         </h5>
         <!-- <h5>{{ datas.parentMessage }}</h5> -->
         <input type="checkbox" id="nam1" value="nam1" v-model="checkedNames">
-        <label for="jack">nam1</label>
-        <input type="checkbox" id="john" value="nam2" v-model="checkedNames">
-        <label for="john">nam2</label>
+        <label for="nam1">nam1</label>
+        <input type="checkbox" id="nam2" value="nam2" v-model="checkedNames">
+        <label for="nam2">nam2</label>
         <input type="checkbox" id="nam3" value="nam3" v-model="checkedNames">
-        <label for="mike">nam3</label>
+        <label for="nam3">nam3</label>
         <br>
         <span>Checked names: {{ checkedNames }}</span>
         <!-- <h5 v-for="checkName in checkedNames" v-bind="checkname" ></h5> -->
@@ -28,8 +28,9 @@
 import { Options, Vue } from 'vue-class-component'
 
 @Options({
-    prop: {
-        title: ''
+    props: {
+        title: String,
+        lst: []
     },
     data () {
         return {
