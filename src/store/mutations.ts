@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default {
     addTask (state: any, newTodo: string):void {
         if (newTodo.length) {

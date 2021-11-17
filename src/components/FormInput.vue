@@ -9,7 +9,6 @@
         <h5 v-for="(it) in lstStr" :key="it">
             {{ it }}
         </h5>
-        <!-- <h5>{{ datas.parentMessage }}</h5> -->
         <input type="checkbox" id="nam1" value="nam1" v-model="checkedNames">
         <label for="nam1">nam1</label>
         <input type="checkbox" id="nam2" value="nam2" v-model="checkedNames">
@@ -18,13 +17,13 @@
         <label for="nam3">nam3</label>
         <br>
         <span>Checked names: {{ checkedNames }}</span>
-        <!-- <h5 v-for="checkName in checkedNames" v-bind="checkname" ></h5> -->
         <h5 v-for="(checkName) in checkedNames" :key="checkName">
             {{ checkName }}
         </h5>
     </div>
 </template>
 <script lang="ts">
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Options, Vue } from 'vue-class-component'
 
 @Options({
@@ -55,7 +54,6 @@ import { Options, Vue } from 'vue-class-component'
             this.lstStr.push(s)
             s = ''
             this.txt1 = null
-            // this.$refs.inputTxt1.value = null
             this.$refs.inputTxt1.focus()
         },
         addItemRefs (obj: any): void {
