@@ -14,7 +14,7 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import FormInput from '../components/FormInput.vue'
-import Pagination from '../components/Pagination.vue'
+import Pagination from '../components/TablePagination.vue'
 
 @Options({
     components: {
@@ -23,19 +23,6 @@ import Pagination from '../components/Pagination.vue'
     },
     data () {
         return {
-            lstData: [
-                '11',
-                '12',
-                '13',
-                '14',
-                '15',
-                '16',
-                '17',
-                '18',
-                '19',
-                '20',
-                '21'
-            ]
         }
     }
 })
