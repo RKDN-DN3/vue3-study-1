@@ -21,7 +21,7 @@ export default {
     name: 'child',
     props: {
         txt1: String,
-        txt2: Number
+        txt2: String
     },
     methods: {
         update (emit, event, nameUpdate) {

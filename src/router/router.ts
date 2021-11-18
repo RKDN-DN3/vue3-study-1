@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import Demo from '../views/Demo.vue'
 import TodoApp from '../views/TodoApp.vue'
+import ApiVnProvinces from '../views/API.vue'
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -21,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/todoapp',
         name: 'TodoApp',
         component: TodoApp
+    },
+    {
+        path: '/vnprovinces',
+        name: 'API VN',
+        component: ApiVnProvinces
     },
     {
         path: '/Demo',

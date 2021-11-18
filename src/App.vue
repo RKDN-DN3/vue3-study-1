@@ -3,6 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/todoapp">TodoApp</router-link> |
+     <router-link to="/vnprovinces">API VN</router-link> |
     <router-link to="/Demo">Demo</router-link>
   </div>
   <router-view/>

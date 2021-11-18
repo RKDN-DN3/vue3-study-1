@@ -6,7 +6,7 @@
         </div>
         <div class="col-sm-8">
             <h1>Page Demo</h1>
-            <Pagination :lst="lstData" title="Paginate" />
+            <Pagination title="Paginate" />
         </div>
     </div>
 </template>

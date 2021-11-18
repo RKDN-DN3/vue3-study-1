@@ -27,7 +27,7 @@ import Pagin from './Pagination.vue'
     },
     data () {
         return {
-            perPage: 3,
+            perPage: 1,
             currentPage: 1,
             items: [
                 { id: 1, first_name: 'Fred', last_name: 'Flintstone' },

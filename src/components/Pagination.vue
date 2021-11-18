@@ -15,12 +15,12 @@
             </li>
             <li
                 class="page-item"
-                v-for="n in maxPage"
+                v-for="n in pagination"
                 :key="n"
-                :class="{ disabled: currentPage === n }"
+                :class="{ disabled: currentPage === n || n === null }"
             >
                 <a class="page-link" @click="movePage(n)">
-                    {{ n }}
+                    {{ n===null? '...': n }}
                 </a>
             </li>
             <li class="page-item" :class="{ disabled: currentPage >= maxPage }">
@@ -40,7 +40,11 @@
 </template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
+import * as helper from '../help/help'
+
 @Options({
+    components: {
+    },
     data () {
         return {
             maxPage: this.MaxPage,
@@ -50,6 +54,11 @@ import { Options, Vue } from 'vue-class-component'
     props: {
         CurrentPage: Number,
         MaxPage: Number
+    },
+    computed: {
+        pagination () {
+            return helper.formatViewPagination(1, this.maxPage, this.currentPage)
+        }
     },
     methods: {
         movePage (page: number) {
